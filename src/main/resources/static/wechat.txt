@@ -1,0 +1,12 @@
+APPID：wxc61e686455c054da
+appsecret：5fe41cd0fe029d681c5e3013a548bf09
+
+用户同意授权，获取code: 注意scope为snsapi_base和snsapi_userinfo的区别
+    https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc61e686455c054da&redirect_uri=https://hutingcong.mynatapp.cc/sell/wechat/auth&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect
+
+通过code换取网页授权access_token
+    https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
+
+拉取用户信息
+    http：GET（请使用https协议） https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
